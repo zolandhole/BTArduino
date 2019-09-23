@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="darkGrey">#4B4F56</color>
+    <color name="white">#FFFFFF</color>
+    <color name="oranyeu">#F66804</color>
+    <color name="aneh">#334648</color>
+    <color name="tulisan">#316771</color>
+    <color name="grey">#bfbfbf</color>
+    <color name="arduino">#00979D</color>
+    <color name="hitam">#000000</color>
+</resources>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BaseRPMFragment">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentTop="true"
+            android:id="@+id/cv_rpm"
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:background="@color/aneh"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_text_rpm"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/white_grey_border_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/oranyeu"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="15sp"
+                        android:text="@string/rpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ll_timingb"
+                    android:layout_below="@+id/rl_text_rpm"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingbm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_1750_3000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingb"
+                            android:text="@string/timing_b"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingbp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ll_timingc"
+                    android:layout_below="@+id/ll_timingb"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingcm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_3000_4500"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingc"
+                            android:text="@string/timing_c"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingcp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ll_timingd"
+                    android:layout_below="@+id/ll_timingc"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingdm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_4500_6000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingd"
+                            android:text="@string/timing_d"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingdp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ll_timingf"
+                    android:layout_below="@+id/ll_timingd"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingfm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_6000_7500"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingf"
+                            android:text="@string/timing_f"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timingfp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/ll_timingg"
+                    android:layout_below="@+id/ll_timingf"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timinggm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_7500_10000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingg"
+                            android:text="@string/timing_g"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timinggp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_timingh"
+                    android:layout_below="@+id/ll_timingg"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timinghm"
+                        android:text="@string/minmin"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="2.2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:text="@string/_10000_16000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/arduino"
+                            android:id="@+id/tv_timingh"
+                            android:text="@string/timing_h"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button"
+                        android:id="@+id/btn_timinghp"
+                        android:text="@string/plus"
+                        android:textColor="@color/oranyeu"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:id="@+id/rl_gauge"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cv_rpm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_button"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_readrpm"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"
+                        android:text="@string/read"
+                        android:textColor="@color/aneh"
+                        android:background="@drawable/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        tools:ignore="ButtonStyle" />
+
+                    <Button
+                        android:id="@+id/btn_stoprpm"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:text="@string/stop"
+                        android:textColor="@color/aneh"
+                        android:background="@drawable/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        tools:ignore="ButtonStyle" />
+                </LinearLayout>
+
+
+                <de.nitri.gauge.Gauge
+                    android:layout_below="@+id/ll_button"
+                    android:layout_gravity="center"
+                    android:id="@+id/gaugeRPM"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    gauge:initialValue="0"
+                    gauge:maxValue="16000"
+                    gauge:labelTextSize="30"
+                    gauge:minValue="0"
+                    gauge:upperText="RPM"
+                    gauge:needleColor="@color/colorAccent"
+                    gauge:scaleColor="@color/white"
+                    gauge:faceColor="@color/darkGrey"
+                    gauge:lowerText="-"
+                    app:lowerTextSize="50"
+                    app:textSize="12"
+                    gauge:totalNicks="100"
+                    gauge:valuePerNick="200" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:layout_centerInParent="true"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/aneh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btn_rpmpulsm"
+                        android:layout_gravity="start"
+                        android:text="@string/minmin"
+                        android:textColor="@color/arduino"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_gravity="center"
+                            android:text="@string/rpm_puls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_rpmpuls"
+                            android:textColor="@color/arduino"
+                            android:layout_gravity="center"
+                            android:text="@string/na"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_rpmpulsp"
+                        android:layout_gravity="end"
+                        android:text="@string/plus"
+                        android:textColor="@color/arduino"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_launchcontrol"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/rl_gauge"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/aneh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/oranyeu"
+                    android:text="@string/launch_controll"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_revcut"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:background="@drawable/button"
+                            android:id="@+id/btn_revcutm"
+                            android:text="@string/minmin"
+                            android:textColor="@color/oranyeu"
+                            android:layout_weight=".4"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:text="@string/rev_limit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="@color/arduino"
+                                android:id="@+id/tv_revcut"
+                                android:text="@string/rev_limit"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <Button
+                            android:background="@drawable/button"
+                            android:id="@+id/btn_revcutp"
+                            android:text="@string/plus"
+                            android:textColor="@color/oranyeu"
+                            android:layout_weight=".4"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/ll_revlimit"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:background="@drawable/button"
+                            android:id="@+id/btn_revlimitm"
+                            android:text="@string/minmin"
+                            android:textColor="@color/oranyeu"
+                            android:layout_weight=".4"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2.2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textAlignment="center"
+                                android:text="@string/rev_cut_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="@color/arduino"
+                                android:id="@+id/tv_revlimit"
+                                android:text="@string/rev_limit"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <Button
+                            android:background="@drawable/button"
+                            android:id="@+id/btn_revlimitp"
+                            android:text="@string/plus"
+                            android:textColor="@color/oranyeu"
+                            android:layout_weight=".4"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
